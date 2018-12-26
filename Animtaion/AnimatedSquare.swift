@@ -18,7 +18,7 @@ class AnimatedSquare: UILabel {
     }
     
     var isCancelled: Bool {
-        return !self.isRunning
+        return !self.isMoving
     }
     
     var location: Location {
@@ -27,12 +27,13 @@ class AnimatedSquare: UILabel {
     }
 
     public let positions = [Location.topLeft: CGPoint(x: 20.0, y: 44),
-                            Location.downLeft: CGPoint(x: 20, y: 780),
-                            Location.downRight: CGPoint(x: 280.0, y: 780),
-                            Location.topRight: CGPoint(x: 280.0, y: 44)]
+                            .downLeft: .init(x: 20, y: 780),
+                            .downRight: .init(x: 280.0, y: 780),
+                            .topRight: .init(x: 280.0, y: 44)]
     
-    public var isRunning = false
+    public var isMoving = false
     public var isAnimated = false
+    public let animationDuration = 1.0
     
     private var position = Location.topLeft
 }
