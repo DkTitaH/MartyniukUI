@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SquareViewController" customModule="Animtaion" customModuleProvider="target">
             <connections>
-                <outlet property="LableView" destination="i5M-Pr-FkT" id="1hL-bj-uxS"/>
                 <outlet property="isAnimated" destination="GC4-So-BxJ" id="4c0-y0-Kg8"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -23,7 +22,7 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xs5-th-A0t">
                     <rect key="frame" x="157" y="398" width="100" height="100"/>
-                    <autoresizingMask key="autoresizingMask"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.49024240420400456" green="0.94695191062176165" blue="0.011476911599672665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="34"/>
                     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,14 +33,14 @@
                 </button>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GC4-So-BxJ">
                     <rect key="frame" x="184" y="561" width="49" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask"/>
                     <connections>
                         <action selector="changeMode:" destination="-1" eventType="touchUpInside" id="17k-Nf-3xC"/>
                     </connections>
                 </switch>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Animation ON/OFF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucO-st-eQp">
                     <rect key="frame" x="137" y="613" width="140" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -58,7 +57,7 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <connections>
-                <outlet property="lable" destination="brM-Re-Oa7" id="LOU-1W-b6X"/>
+                <outlet property="lable" destination="brM-Re-Oa7" id="7Z4-EZ-o4A"/>
             </connections>
             <point key="canvasLocation" x="104.34782608695653" y="52.901785714285715"/>
         </view>

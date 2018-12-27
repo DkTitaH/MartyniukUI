@@ -10,28 +10,34 @@ import UIKit
 
 class SquareViewController: UIViewController {
 
-    @IBOutlet var lableView: LableView!
-    
     @IBOutlet var isAnimated: UISwitch!
+    
+    public var lableView: LableView? {
+        if self.isViewLoaded {
+            return self.view as? LableView
+        }
+        
+        return nil
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lableView.lable.frame.origin = UIScreen.main.bounds.origin
+        self.lableView?.lable.frame.origin = UIScreen.main.bounds.origin
     }
 
     @IBAction func changeMode(_ sender: UISwitch) {
-        self.lableView.lable.isMoving = false
+        self.lableView?.lable.isMoving = false
     }
     
     @IBAction func click(_ sender: UIButton) {
-        let positions = self.lableView.lable.positions()
+        let positions = self.lableView?.lable.positions()
         
-        if let lable = self.lableView.lable {
+        if let lable = self.lableView?.lable {
             lable.isMoving = !lable.isMoving
             
             if lable.isMoving && !lable.isAnimated {
-                self.lableView.setPositionAnimate(duration: lable.animationDuration, animated: self.isAnimated.isOn) {
-                    positions.forEach {
+                self.lableView?.setPositionAnimate(duration: lable.animationDuration, animated: self.isAnimated.isOn) {
+                    positions?.forEach {
                         if lable.frame.origin == $0.value {
                             lable.location = $0.key
                         }
