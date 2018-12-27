@@ -12,8 +12,8 @@
 		3F0E8F1621D21A55005D790D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E8F1421D21A55005D790D /* LaunchScreen.storyboard */; };
 		3F0E8F2121D21A55005D790D /* AnimtaionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8F2021D21A55005D790D /* AnimtaionTests.swift */; };
 		3F0E8F2C21D21A55005D790D /* AnimtaionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8F2B21D21A55005D790D /* AnimtaionUITests.swift */; };
-		3F0E8F3B21D21A87005D790D /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8F3921D21A87005D790D /* NewViewController.swift */; };
-		3F0E8F3C21D21A87005D790D /* NewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E8F3A21D21A87005D790D /* NewViewController.xib */; };
+		3F0E8F3B21D21A87005D790D /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8F3921D21A87005D790D /* SquareViewController.swift */; };
+		3F0E8F3C21D21A87005D790D /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F0E8F3A21D21A87005D790D /* SquareViewController.xib */; };
 		3F0E8F3E21D21AE6005D790D /* LableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8F3D21D21AE6005D790D /* LableView.swift */; };
 		3F0E8F4021D24685005D790D /* AnimatedSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0E8F3F21D24685005D790D /* AnimatedSquare.swift */; };
 /* End PBXBuildFile section */
@@ -47,8 +47,8 @@
 		3F0E8F2721D21A55005D790D /* AnimtaionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimtaionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F0E8F2B21D21A55005D790D /* AnimtaionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimtaionUITests.swift; sourceTree = "<group>"; };
 		3F0E8F2D21D21A55005D790D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F0E8F3921D21A87005D790D /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
-		3F0E8F3A21D21A87005D790D /* NewViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewViewController.xib; sourceTree = "<group>"; };
+		3F0E8F3921D21A87005D790D /* SquareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
+		3F0E8F3A21D21A87005D790D /* SquareViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
 		3F0E8F3D21D21AE6005D790D /* LableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LableView.swift; sourceTree = "<group>"; };
 		3F0E8F3F21D24685005D790D /* AnimatedSquare.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedSquare.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,14 +101,11 @@
 		3F0E8F0A21D21A54005D790D /* Animtaion */ = {
 			isa = PBXGroup;
 			children = (
+				3FF209D221D4D14300A79123 /* SquareViewController */,
 				3F0E8F0B21D21A54005D790D /* AppDelegate.swift */,
 				3F0E8F1221D21A55005D790D /* Assets.xcassets */,
 				3F0E8F1421D21A55005D790D /* LaunchScreen.storyboard */,
 				3F0E8F1721D21A55005D790D /* Info.plist */,
-				3F0E8F3921D21A87005D790D /* NewViewController.swift */,
-				3F0E8F3A21D21A87005D790D /* NewViewController.xib */,
-				3F0E8F3D21D21AE6005D790D /* LableView.swift */,
-				3F0E8F3F21D24685005D790D /* AnimatedSquare.swift */,
 			);
 			path = Animtaion;
 			sourceTree = "<group>";
@@ -129,6 +126,18 @@
 				3F0E8F2D21D21A55005D790D /* Info.plist */,
 			);
 			path = AnimtaionUITests;
+			sourceTree = "<group>";
+		};
+		3FF209D221D4D14300A79123 /* SquareViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3F0E8F3921D21A87005D790D /* SquareViewController.swift */,
+				3F0E8F3A21D21A87005D790D /* SquareViewController.xib */,
+				3F0E8F3D21D21AE6005D790D /* LableView.swift */,
+				3F0E8F3F21D24685005D790D /* AnimatedSquare.swift */,
+			);
+			name = SquareViewController;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F0E8F1621D21A55005D790D /* LaunchScreen.storyboard in Resources */,
-				3F0E8F3C21D21A87005D790D /* NewViewController.xib in Resources */,
+				3F0E8F3C21D21A87005D790D /* SquareViewController.xib in Resources */,
 				3F0E8F1321D21A55005D790D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +273,7 @@
 			files = (
 				3F0E8F0C21D21A54005D790D /* AppDelegate.swift in Sources */,
 				3F0E8F3E21D21AE6005D790D /* LableView.swift in Sources */,
-				3F0E8F3B21D21A87005D790D /* NewViewController.swift in Sources */,
+				3F0E8F3B21D21A87005D790D /* SquareViewController.swift in Sources */,
 				3F0E8F4021D24685005D790D /* AnimatedSquare.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

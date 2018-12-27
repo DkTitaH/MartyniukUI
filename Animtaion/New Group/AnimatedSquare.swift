@@ -12,8 +12,8 @@ class AnimatedSquare: UILabel {
     
     enum Location {
         case topLeft
-        case downLeft
-        case downRight
+        case bottomLeft
+        case bottomRight
         case topRight
     }
     
@@ -26,10 +26,16 @@ class AnimatedSquare: UILabel {
         set { self.position = newValue }
     }
 
-    public let positions = [Location.topLeft: CGPoint(x: 20.0, y: 44),
-                            .downLeft: .init(x: 20, y: 780),
-                            .downRight: .init(x: 280.0, y: 780),
-                            .topRight: .init(x: 280.0, y: 44)]
+
+    public func positions() -> [Location:CGPoint] {
+        let screenSize = UIScreen.main.bounds
+        let lableSize = self.bounds
+        
+        return [Location.topLeft: screenSize.origin,
+                .bottomLeft: .init(x: screenSize.minX, y: screenSize.maxY - lableSize.height),
+                .bottomRight: .init(x: screenSize.maxX - lableSize.width, y: screenSize.maxY - lableSize.height),
+                .topRight: .init(x: screenSize.maxX - lableSize.width, y: screenSize.minY)]
+    }
     
     public var isMoving = false
     public var isAnimated = false

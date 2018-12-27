@@ -39,16 +39,17 @@ class LableView: UIView {
 
     private func setPosition() {
         var position = self.lable?.frame.origin
+        let positions = self.lable.positions()
         
         switch position {
-        case self.lable.positions[.topLeft]:
-            position = self.lable.positions[.downLeft];
-        case self.lable.positions[.topRight]:
-            position = self.lable.positions[.topLeft];
-        case self.lable.positions[.downLeft]:
-            position = self.lable.positions[.downRight];
-        case self.lable.positions[.downRight]:
-            position = self.lable.positions[.topRight];
+        case positions[.topLeft]:
+            position = positions[.bottomLeft];
+        case positions[.topRight]:
+            position = positions[.topLeft];
+        case positions[.bottomLeft]:
+            position = positions[.bottomRight];
+        case positions[.bottomRight]:
+            position = positions[.topRight];
         default: return
         }
         

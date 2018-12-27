@@ -3,12 +3,12 @@
 //  Animtaion
 //
 //  Created by Student on 25.12.2018.
-//  Copyright © 2018 Student. All rights reserved.
+//  Copyright © 2018 Student. All positionsrights reserved.
 //
 
 import UIKit
 
-class NewViewController: UIViewController {
+class SquareViewController: UIViewController {
 
     @IBOutlet var lableView: LableView!
     
@@ -16,6 +16,7 @@ class NewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.lableView.lable.frame.origin = UIScreen.main.bounds.origin
     }
 
     @IBAction func changeMode(_ sender: UISwitch) {
@@ -23,7 +24,7 @@ class NewViewController: UIViewController {
     }
     
     @IBAction func click(_ sender: UIButton) {
-        let positions = self.lableView.lable.positions
+        let positions = self.lableView.lable.positions()
         
         if let lable = self.lableView.lable {
             lable.isMoving = !lable.isMoving

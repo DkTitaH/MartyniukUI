@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         -> Bool
     {
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        self.window?.rootViewController = NewViewController()
+        self.window?.rootViewController = SquareViewController()
         self.window?.makeKeyAndVisible()
         
         return true
