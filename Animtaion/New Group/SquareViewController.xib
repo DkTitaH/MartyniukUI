@@ -28,14 +28,14 @@
                     <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <state key="normal" title="Start"/>
                     <connections>
-                        <action selector="click:" destination="-1" eventType="touchUpInside" id="OKj-vX-rdd"/>
+                        <action selector="onStartButton:" destination="-1" eventType="touchUpInside" id="OKj-vX-rdd"/>
                     </connections>
                 </button>
                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GC4-So-BxJ">
                     <rect key="frame" x="184" y="561" width="49" height="31"/>
                     <autoresizingMask key="autoresizingMask"/>
                     <connections>
-                        <action selector="changeMode:" destination="-1" eventType="touchUpInside" id="17k-Nf-3xC"/>
+                        <action selector="onSwitch:" destination="-1" eventType="touchUpInside" id="17k-Nf-3xC"/>
                     </connections>
                 </switch>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Animation ON/OFF" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ucO-st-eQp">

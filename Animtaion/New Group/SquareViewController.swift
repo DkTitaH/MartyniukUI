@@ -25,11 +25,11 @@ class SquareViewController: UIViewController {
         self.lableView?.lable.frame.origin = UIScreen.main.bounds.origin
     }
 
-    @IBAction func changeMode(_ sender: UISwitch) {
+    @IBAction func onSwitch(_ sender: UISwitch) {
         self.lableView?.lable.isMoving = false
     }
     
-    @IBAction func click(_ sender: UIButton) {
+    @IBAction func onStartButton(_ sender: UIButton) {
         let positions = self.lableView?.lable.positions()
         
         if let lable = self.lableView?.lable {
