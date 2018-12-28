@@ -12,10 +12,10 @@
 		3FFA601121D61BE600D8F118 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FFA600F21D61BE600D8F118 /* LaunchScreen.storyboard */; };
 		3FFA601C21D61BE600D8F118 /* AnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA601B21D61BE600D8F118 /* AnimationTests.swift */; };
 		3FFA602721D61BE600D8F118 /* AnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA602621D61BE600D8F118 /* AnimationUITests.swift */; };
-		3FFA603921D61C2300D8F118 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA603521D61C2300D8F118 /* SquareViewController.swift */; };
-		3FFA603A21D61C2300D8F118 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA603621D61C2300D8F118 /* SquareView.swift */; };
-		3FFA603B21D61C2300D8F118 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FFA603721D61C2300D8F118 /* SquareViewController.xib */; };
-		3FFA603C21D61C2300D8F118 /* AnimatedSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA603821D61C2300D8F118 /* AnimatedSquare.swift */; };
+		3FFA604221D620FF00D8F118 /* SquareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA603E21D620FF00D8F118 /* SquareViewController.swift */; };
+		3FFA604321D620FF00D8F118 /* SquareViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FFA603F21D620FF00D8F118 /* SquareViewController.xib */; };
+		3FFA604421D620FF00D8F118 /* AnimatedSquare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA604021D620FF00D8F118 /* AnimatedSquare.swift */; };
+		3FFA604521D620FF00D8F118 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFA604121D620FF00D8F118 /* SquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,10 +47,10 @@
 		3FFA602221D61BE600D8F118 /* AnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFA602621D61BE600D8F118 /* AnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationUITests.swift; sourceTree = "<group>"; };
 		3FFA602821D61BE600D8F118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FFA603521D61C2300D8F118 /* SquareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
-		3FFA603621D61C2300D8F118 /* SquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		3FFA603721D61C2300D8F118 /* SquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
-		3FFA603821D61C2300D8F118 /* AnimatedSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedSquare.swift; sourceTree = "<group>"; };
+		3FFA603E21D620FF00D8F118 /* SquareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareViewController.swift; sourceTree = "<group>"; };
+		3FFA603F21D620FF00D8F118 /* SquareViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SquareViewController.xib; sourceTree = "<group>"; };
+		3FFA604021D620FF00D8F118 /* AnimatedSquare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedSquare.swift; sourceTree = "<group>"; };
+		3FFA604121D620FF00D8F118 /* SquareView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 		3FFA600521D61BE400D8F118 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
-				3FFA603421D61C2300D8F118 /* SquareViewController */,
+				3FFA603D21D620FF00D8F118 /* SquareViewController */,
 				3FFA600621D61BE400D8F118 /* AppDelegate.swift */,
 				3FFA600D21D61BE600D8F118 /* Assets.xcassets */,
 				3FFA600F21D61BE600D8F118 /* LaunchScreen.storyboard */,
@@ -128,16 +128,15 @@
 			path = AnimationUITests;
 			sourceTree = "<group>";
 		};
-		3FFA603421D61C2300D8F118 /* SquareViewController */ = {
+		3FFA603D21D620FF00D8F118 /* SquareViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3FFA603521D61C2300D8F118 /* SquareViewController.swift */,
-				3FFA603621D61C2300D8F118 /* SquareView.swift */,
-				3FFA603721D61C2300D8F118 /* SquareViewController.xib */,
-				3FFA603821D61C2300D8F118 /* AnimatedSquare.swift */,
+				3FFA603E21D620FF00D8F118 /* SquareViewController.swift */,
+				3FFA603F21D620FF00D8F118 /* SquareViewController.xib */,
+				3FFA604021D620FF00D8F118 /* AnimatedSquare.swift */,
+				3FFA604121D620FF00D8F118 /* SquareView.swift */,
 			);
-			name = SquareViewController;
-			path = ../../../MartyniukUI/Animtaion/SquareViewController;
+			path = SquareViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +244,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FFA601121D61BE600D8F118 /* LaunchScreen.storyboard in Resources */,
+				3FFA604321D620FF00D8F118 /* SquareViewController.xib in Resources */,
 				3FFA600E21D61BE600D8F118 /* Assets.xcassets in Resources */,
-				3FFA603B21D61C2300D8F118 /* SquareViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,9 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FFA600721D61BE400D8F118 /* AppDelegate.swift in Sources */,
-				3FFA603A21D61C2300D8F118 /* SquareView.swift in Sources */,
-				3FFA603921D61C2300D8F118 /* SquareViewController.swift in Sources */,
-				3FFA603C21D61C2300D8F118 /* AnimatedSquare.swift in Sources */,
+				3FFA604421D620FF00D8F118 /* AnimatedSquare.swift in Sources */,
+				3FFA604521D620FF00D8F118 /* SquareView.swift in Sources */,
+				3FFA604221D620FF00D8F118 /* SquareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
