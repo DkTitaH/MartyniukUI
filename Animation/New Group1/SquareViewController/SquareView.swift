@@ -60,7 +60,6 @@ class SquareView: UIView {
         self.isMoving = !self.isMoving
         
         if self.isMoving && !self.animated {
-            
             self.setPosition(duration: self.animationDuration, animated: self.isAnimated?.isOn ?? false)
         }
     }
