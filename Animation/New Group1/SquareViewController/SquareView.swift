@@ -20,12 +20,17 @@ class SquareView: UIView {
     @IBOutlet var isAnimated: UISwitch?
     
     @IBAction func onSwitch(_ sender: Any) {
-        self.isMoving = false
-        self.startButton?.setTitle(State.Start.rawValue, for: .normal)
+        self._isMoving = false
     }
     
-    var isCancelled: Bool {
-        return !self.isMoving
+    var _isMoving: Bool {
+        get { return self.isMoving}
+        set {
+            self.isMoving = newValue
+            self.isMoving
+                ? self.startButton?.setTitle(State.Stop.rawValue, for: .normal)
+                : self.startButton?.setTitle(State.Start.rawValue, for: .normal)
+        }
     }
     
     private let generator = Generator<CGRect.Position>(objects: .topLeft, .bottomLeft, .bottomRight, .topRight)
@@ -52,13 +57,11 @@ class SquareView: UIView {
     }
     
     func start() {
-        self.isMoving = !self.isMoving
+        self._isMoving = !self._isMoving
         
-        if self.isMoving && !self.animated {
-            self.startButton?.setTitle(State.Stop.rawValue, for: .normal)
+        if self._isMoving && !self.animated {
+            
             self.setPosition(duration: self.animationDuration, animated: self.isAnimated?.isOn ?? false)
-        } else {
-            self.startButton?.setTitle(State.Start.rawValue, for: .normal)
         }
     }
     
@@ -70,7 +73,7 @@ class SquareView: UIView {
                 self.changePosition()
             },
             completion: { bool in
-                if self.isMoving {
+                if self._isMoving {
                     self.setPosition(duration: duration, animated: animated)
                 } else {
                     self.animated = false
