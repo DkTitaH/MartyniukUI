@@ -20,14 +20,14 @@ class SquareView: UIView {
     @IBOutlet var isAnimated: UISwitch?
     
     @IBAction func onSwitch(_ sender: Any) {
-        self._isMoving = false
+        self.isMoving = false
     }
     
-    var _isMoving: Bool {
-        get { return self.isMoving}
+    var isMoving: Bool {
+        get { return self.privateIsMoving}
         set {
-            self.isMoving = newValue
-            self.isMoving
+            self.privateIsMoving = newValue
+            self.privateIsMoving
                 ? self.startButton?.setTitle(State.Stop.rawValue, for: .normal)
                 : self.startButton?.setTitle(State.Start.rawValue, for: .normal)
         }
@@ -47,7 +47,7 @@ class SquareView: UIView {
     }()
     
     private var position = CGRect.Position.topLeft
-    private var isMoving = false
+    private var privateIsMoving = false
     private var animated = false
     
     override func layoutSubviews() {
@@ -57,9 +57,9 @@ class SquareView: UIView {
     }
     
     func start() {
-        self._isMoving = !self._isMoving
+        self.isMoving = !self.isMoving
         
-        if self._isMoving && !self.animated {
+        if self.isMoving && !self.animated {
             
             self.setPosition(duration: self.animationDuration, animated: self.isAnimated?.isOn ?? false)
         }
@@ -73,7 +73,7 @@ class SquareView: UIView {
                 self.changePosition()
             },
             completion: { bool in
-                if self._isMoving {
+                if self.isMoving {
                     self.setPosition(duration: duration, animated: animated)
                 } else {
                     self.animated = false
