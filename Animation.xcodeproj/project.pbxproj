@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F6B80DC21E4935E005DD348 /* Strideable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80D821E4935E005DD348 /* Strideable+Extensions.swift */; };
+		3F6B80DD21E4935E005DD348 /* DispatchTime+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80D921E4935E005DD348 /* DispatchTime+Extensions.swift */; };
+		3F6B80DE21E4935E005DD348 /* DispatchQueue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80DA21E4935E005DD348 /* DispatchQueue+Extensions.swift */; };
+		3F6B80DF21E4935E005DD348 /* RangeReplaceableCollection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80DB21E4935E005DD348 /* RangeReplaceableCollection+Extensions.swift */; };
+		3F6B80E121E49392005DD348 /* Cancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80E021E49392005DD348 /* Cancellable.swift */; };
+		3F6B80E721E493A7005DD348 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80E221E493A7005DD348 /* Queue.swift */; };
+		3F6B80E821E493A7005DD348 /* ObservableObject.Observer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80E321E493A7005DD348 /* ObservableObject.Observer.swift */; };
+		3F6B80E921E493A7005DD348 /* ObservableObject.Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80E421E493A7005DD348 /* ObservableObject.Observers.swift */; };
+		3F6B80EA21E493A7005DD348 /* ObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80E521E493A7005DD348 /* ObservableObject.swift */; };
+		3F6B80EB21E493A7005DD348 /* AbstractCancellableProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B80E621E493A7005DD348 /* AbstractCancellableProperty.swift */; };
 		3FD1B03B21DCD6BE003D2B95 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1B03A21DCD6BE003D2B95 /* Optional+Extension.swift */; };
 		3FD1B03E21DCD7EC003D2B95 /* Atomic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1B03D21DCD7EC003D2B95 /* Atomic.swift */; };
 		3FD1B04221DCD7F5003D2B95 /* F.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD1B04121DCD7F5003D2B95 /* F.swift */; };
@@ -44,6 +54,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F6B80D821E4935E005DD348 /* Strideable+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Strideable+Extensions.swift"; path = "../../../../../Martyniuk/Sources/Extensions/Strideable+Extensions.swift"; sourceTree = "<group>"; };
+		3F6B80D921E4935E005DD348 /* DispatchTime+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchTime+Extensions.swift"; path = "../../../../../Martyniuk/Sources/Extensions/DispatchTime+Extensions.swift"; sourceTree = "<group>"; };
+		3F6B80DA21E4935E005DD348 /* DispatchQueue+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Extensions.swift"; path = "../../../../../Martyniuk/Sources/Extensions/DispatchQueue+Extensions.swift"; sourceTree = "<group>"; };
+		3F6B80DB21E4935E005DD348 /* RangeReplaceableCollection+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "RangeReplaceableCollection+Extensions.swift"; path = "../../../../../Martyniuk/Sources/Extensions/RangeReplaceableCollection+Extensions.swift"; sourceTree = "<group>"; };
+		3F6B80E021E49392005DD348 /* Cancellable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cancellable.swift; path = ../../../../Martyniuk/Sources/Types/Cancellable.swift; sourceTree = "<group>"; };
+		3F6B80E221E493A7005DD348 /* Queue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Queue.swift; path = ../../../../Martyniuk/Sources/Types/Queue.swift; sourceTree = "<group>"; };
+		3F6B80E321E493A7005DD348 /* ObservableObject.Observer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObservableObject.Observer.swift; path = ../../../../Martyniuk/Sources/Types/ObservableObject.Observer.swift; sourceTree = "<group>"; };
+		3F6B80E421E493A7005DD348 /* ObservableObject.Observers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObservableObject.Observers.swift; path = ../../../../Martyniuk/Sources/Types/ObservableObject.Observers.swift; sourceTree = "<group>"; };
+		3F6B80E521E493A7005DD348 /* ObservableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObservableObject.swift; path = ../../../../Martyniuk/Sources/Types/ObservableObject.swift; sourceTree = "<group>"; };
+		3F6B80E621E493A7005DD348 /* AbstractCancellableProperty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AbstractCancellableProperty.swift; path = ../../../../Martyniuk/Sources/Types/AbstractCancellableProperty.swift; sourceTree = "<group>"; };
 		3FD1B03A21DCD6BE003D2B95 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		3FD1B03D21DCD7EC003D2B95 /* Atomic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Atomic.swift; path = ../../../../test/Animation/Lib/Types/Atomic.swift; sourceTree = "<group>"; };
 		3FD1B04121DCD7F5003D2B95 /* F.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = F.swift; sourceTree = "<group>"; };
@@ -94,9 +114,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F6B80D721E49314005DD348 /* Mixin */ = {
+			isa = PBXGroup;
+			children = (
+				3FE6999C21DDFC43007A64B4 /* RootViewRepresentable.swift */,
+			);
+			path = Mixin;
+			sourceTree = "<group>";
+		};
 		3FD1B03621DCD677003D2B95 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				3F6B80D721E49314005DD348 /* Mixin */,
 				3FE6999B21DDFC21007A64B4 /* Protocols */,
 				3FD1B03C21DCD7E0003D2B95 /* Types */,
 				3FD1B03721DCD687003D2B95 /* Extensions */,
@@ -117,6 +146,10 @@
 		3FD1B03821DCD690003D2B95 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				3F6B80DA21E4935E005DD348 /* DispatchQueue+Extensions.swift */,
+				3F6B80D921E4935E005DD348 /* DispatchTime+Extensions.swift */,
+				3F6B80DB21E4935E005DD348 /* RangeReplaceableCollection+Extensions.swift */,
+				3F6B80D821E4935E005DD348 /* Strideable+Extensions.swift */,
 				3FD1B04521DCD8D8003D2B95 /* NSLock+Extension.swift */,
 				3FD1B03A21DCD6BE003D2B95 /* Optional+Extension.swift */,
 			);
@@ -134,6 +167,12 @@
 		3FD1B03C21DCD7E0003D2B95 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				3F6B80E621E493A7005DD348 /* AbstractCancellableProperty.swift */,
+				3F6B80E321E493A7005DD348 /* ObservableObject.Observer.swift */,
+				3F6B80E421E493A7005DD348 /* ObservableObject.Observers.swift */,
+				3F6B80E521E493A7005DD348 /* ObservableObject.swift */,
+				3F6B80E221E493A7005DD348 /* Queue.swift */,
+				3F6B80E021E49392005DD348 /* Cancellable.swift */,
 				3FD1B04121DCD7F5003D2B95 /* F.swift */,
 				3FD1B03D21DCD7EC003D2B95 /* Atomic.swift */,
 				3FD1B04321DCD82F003D2B95 /* Generator.swift */,
@@ -161,7 +200,6 @@
 		3FE6999B21DDFC21007A64B4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3FE6999C21DDFC43007A64B4 /* RootViewRepresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -361,16 +399,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD1B04221DCD7F5003D2B95 /* F.swift in Sources */,
+				3F6B80EB21E493A7005DD348 /* AbstractCancellableProperty.swift in Sources */,
 				3FE6999D21DDFC43007A64B4 /* RootViewRepresentable.swift in Sources */,
 				3FD1B04621DCD8D8003D2B95 /* NSLock+Extension.swift in Sources */,
+				3F6B80E821E493A7005DD348 /* ObservableObject.Observer.swift in Sources */,
+				3F6B80E921E493A7005DD348 /* ObservableObject.Observers.swift in Sources */,
+				3F6B80DE21E4935E005DD348 /* DispatchQueue+Extensions.swift in Sources */,
 				3FD1B04421DCD82F003D2B95 /* Generator.swift in Sources */,
 				3FFA600721D61BE400D8F118 /* AppDelegate.swift in Sources */,
+				3F6B80E121E49392005DD348 /* Cancellable.swift in Sources */,
+				3F6B80E721E493A7005DD348 /* Queue.swift in Sources */,
 				3FFA604421D620FF00D8F118 /* Square.swift in Sources */,
+				3F6B80EA21E493A7005DD348 /* ObservableObject.swift in Sources */,
 				3FD1B04C21DCE762003D2B95 /* CGRect+Extension.swift in Sources */,
 				3FD1B03B21DCD6BE003D2B95 /* Optional+Extension.swift in Sources */,
 				3FFA604521D620FF00D8F118 /* SquareView.swift in Sources */,
+				3F6B80DF21E4935E005DD348 /* RangeReplaceableCollection+Extensions.swift in Sources */,
 				3FD1B03E21DCD7EC003D2B95 /* Atomic.swift in Sources */,
+				3F6B80DD21E4935E005DD348 /* DispatchTime+Extensions.swift in Sources */,
 				3FD1B04A21DCD9BD003D2B95 /* Position.swift in Sources */,
+				3F6B80DC21E4935E005DD348 /* Strideable+Extensions.swift in Sources */,
 				3FFA604221D620FF00D8F118 /* SquareViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
