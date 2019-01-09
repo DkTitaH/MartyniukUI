@@ -11,10 +11,10 @@ import Foundation
 class Generator<Value> {
     
     private let index: Atomic<Int>
-    private let objects: Atomic<[Value]>
+    private let objects: [Value]
     
     init(objects: [Value]) {
-        self.objects = Atomic(objects)
+        self.objects = objects
         self.index = Atomic(0)
     }
     
@@ -23,12 +23,10 @@ class Generator<Value> {
     }
     
     func next() -> Value {
-        let index: Int = self.index.modify { index in
-            defer { index = (index + 1) % self.objects.value.count }
+        return self.index.modify { index in
+            defer { index = (index + 1) % self.objects.count }
             
-            return index
+            return self.objects[index]
         }
-        
-        return self.objects.value[index]
     }
 }

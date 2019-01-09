@@ -10,70 +10,55 @@ import UIKit
 
 class SquareView: UIView {
     
-    enum State: String {
-        case Start
-        case Stop
+    struct Strings {
+        
+        static let start = "Start"
+        static let stop = "Stop"
+    }
+    
+    struct Durations {
+        
+        static let oneSecond = 1.0
+        static let zero = 0.0
     }
     
     @IBOutlet var startButton: UIButton?
     
-    @IBOutlet var isAnimated: UISwitch?
-    
-    @IBAction func onSwitch(_ sender: Any) {
-        self.isMoving = false
-    }
+    @IBOutlet var square: Square?
     
     var isMoving: Bool {
         get { return self.privateIsMoving}
         set {
             self.privateIsMoving = newValue
-            self.privateIsMoving
-                ? self.startButton?.setTitle(State.Stop.rawValue, for: .normal)
-                : self.startButton?.setTitle(State.Start.rawValue, for: .normal)
+            let string = self.privateIsMoving ? Strings.stop : Strings.start
+            self.startButton?.setTitle(string, for: .normal)
         }
     }
     
     private let generator = Generator<CGRect.Position>(objects: .topLeft, .bottomLeft, .bottomRight, .topRight)
     
-    private let animationDuration = 1.0
-    
-    private lazy var square: Square = {
-        let origin = self.frame.inset(by: self.safeAreaInsets).topLeft
-        let rect = CGRect(origin: origin, size: CGSize(width: 100, height: 100))
-        let square = Square(frame: rect)
-        square.backgroundColor = .blue
-
-        return square
-    }()
-    
-    private var position = CGRect.Position.topLeft
+    private(set) var isAnimating = true
     private var privateIsMoving = false
     private var animated = false
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        self.addSubview(self.square)
-    }
-    
-    func start() {
+    func moving() {
         self.isMoving = !self.isMoving
         
         if self.isMoving && !self.animated {
-            self.setPosition(duration: self.animationDuration, animated: self.isAnimated?.isOn ?? false)
+            self.setPosition(duration: Durations.oneSecond, animating: self.isAnimating)
         }
     }
     
-    private func setPosition(duration: TimeInterval,animated: Bool) {
+    private func setPosition(duration: TimeInterval, animating: Bool) {
         UIView.animate(
-            withDuration: animated ? 1 : 0,
+            withDuration: animating ? Durations.oneSecond : Durations.zero,
             animations: {
                 self.animated = true
                 self.changePosition()
             },
             completion: { bool in
                 if self.isMoving {
-                    self.setPosition(duration: duration, animated: animated)
+                    self.setPosition(duration: duration, animating: animating)
                 } else {
                     self.animated = false
                 }
@@ -82,27 +67,21 @@ class SquareView: UIView {
     }
 
     private func changePosition() {
-        self.position = self.generator.next()
-        let positions = self.positions()
+        func safeAreaInsets(of insets: UIEdgeInsets, for square: Square) -> UIEdgeInsets {
+            let squareSide = square.frame.width
+            
+            let top = insets.top
+            let left = insets.left
+            let bottom = insets.bottom + squareSide
+            let right = insets.right + squareSide
+            
+            return UIEdgeInsets(top: top, left: left, bottom: bottom, right: right)
+        }
         
-        self.square.frame.origin = positions[self.position] ?? .zero
-    }
-    
-    private func positions() -> [CGRect.Position : CGPoint] {
-        let screen = self.frame.inset(
-            by: UIEdgeInsets(
-                top: self.safeAreaInsets.top,
-                left: 0,
-                bottom: self.square.frame.height,
-                right: self.square.frame.width
-            )
-        )
-        
-        return [
-            .topLeft: screen.topLeft,
-            .bottomLeft: screen.bottomLeft,
-            .bottomRight: screen.bottomRight,
-            .topRight: screen.topRight
-        ]
+        self.square.do {
+            let newInsets = safeAreaInsets(of: self.safeAreaInsets, for: $0)
+            let nextPoint = self.frame.inset(by: newInsets).point(at: self.generator.next())
+            $0.frame.origin = nextPoint
+        }
     }
 }
